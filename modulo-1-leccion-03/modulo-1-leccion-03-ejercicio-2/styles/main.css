@@ -1,0 +1,25 @@
+div {
+  background-color: cornflowerblue;
+  width: 100px;
+  height: 100px;
+}
+
+/* block me muestra los elementos uno debajo de otro, deberian de ocupar todo el espacio de la pantalla pero al haberles impuesto un tamaño fijo de 100x100 se ajustan a dicho tamaño */
+.item {
+  display: block;
+}
+
+/* inline muestra los 3 elementos uno al lado del otro ocupando el espacio justo de dichos elementos */
+/* .item {
+  display: inline;
+} */
+
+/* inline-block me muestra cajitas una al lado de otra */
+/* .item {
+  display: inline-block;
+} */
+
+/* none no me muestra nada */
+/* .item {
+  display: none;
+} */
