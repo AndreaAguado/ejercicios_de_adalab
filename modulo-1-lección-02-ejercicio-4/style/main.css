@@ -1,0 +1,19 @@
+body {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rebeccapurple;
+  background-color: mediumpurple;
+  line-height: 1.5cm;
+}
+
+/* section {
+    background-color: aquamarine;
+}
+
+aside {
+    background-color: lavenderblush;
+} */
+.bottom-page {
+  /* bottom-page es el nombre de una clase por eso se pone un . para usarla */
+  color: lightgray;
+}

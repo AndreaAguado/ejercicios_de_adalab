@@ -1,0 +1,12 @@
+/* en esta hoja se va a resetear el estilo original de la página */
+
+/* lo primero es borrar las viñetas de las listas */
+ul {
+  list-style-type: none;
+}
+
+/* a TODOS los elementos de la página (el asterisco*) se le quitan los margenes y se le pone el tamaño 14px */
+* {
+  margin: 0px;
+  font-size: 14px;
+}

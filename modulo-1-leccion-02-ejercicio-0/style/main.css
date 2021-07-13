@@ -1,0 +1,62 @@
+/* color del fondo de toda la página: */
+body {
+    background-color: lavender;
+}
+/* fuente de la primera letra del título: */
+#titulo1 {
+    font-size: 70px;
+}
+/* color y fuente del título principal: */
+h1 {
+    color: palevioletred;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* color de fondo de la sección: */
+section {
+    background-color: pink;
+}
+
+/* color de fondo de la tabla: */
+#tabla1 {
+   
+    background-color: paleturquoise;
+}
+
+/* A continuación se hace que el link aparezca morado y que cuando se pase el ratón por encima aparzca turquesita el fondo y las letras en blanco */
+.text-link {
+    color: purple;
+  }
+  .text-link:hover {
+    background-color: aquamarine;
+    color: white;
+  }
+
+  /* formato de los 3 botones */
+  .button {
+    background-color: grey;
+    border-radius: 20px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .button--new {
+    background-color: lightgreen;
+  }
+  
+  .button--rename {
+    background-color: cornflowerblue;
+  }
+  
+  .button--delete {
+    background-color: salmon;
+  }
+
+  aside.links {
+      color: salmon;
+  }
+
+

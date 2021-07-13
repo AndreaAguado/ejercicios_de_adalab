@@ -1,0 +1,22 @@
+/* para no tener que crear varios identificadores y poner info redundante en el css pues se crea la clase title y se emplea en todas las noticias */
+
+/* .title {
+  font-size: 40px;
+  color: red;
+} */
+
+#title2 {
+  font-size: 80px;
+}
+
+h1 {
+  font-size: 40px;
+  color: green;
+}
+
+h2 {
+  color: red;
+}
+body {
+  color: purple;
+}

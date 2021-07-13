@@ -1,0 +1,12 @@
+section {
+    background-color: aquamarine;
+}
+
+aside {
+    background-color: lavenderblush;
+}
+.bottom-page {
+    /* bottom-page es el nombre de una clase por eso se pone un . para usarla */
+    color: lightgray;
+}
+
