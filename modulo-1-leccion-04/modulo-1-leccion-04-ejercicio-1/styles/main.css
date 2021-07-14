@@ -1,0 +1,53 @@
+body {
+  margin: 25px;
+}
+div.container {
+  margin: 20px;
+}
+
+/* LOS ITEMS SE MUEVEN EN LA HORIZONTAL X PARALELOS AL EJE Y */
+.container-v {
+  width: 500px;
+  height: 500px;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  /* con flex-direction indico cual es el eje principal, si flex-direction: row el principal será el horizontal y si flex-direction: column, será el vertical  */
+
+  /* justify-content se aplica al EJE PRINCIPAL, es decir todo lo que ocurra será en esa dirección */
+  justify-content: flex-start;
+}
+
+.item-v {
+  box-sizing: border-box;
+  width: 20px;
+  /* si se pone un height del 100% aprovechará toda la altura */
+  height: 100%;
+  background-color: peachpuff;
+  border: 1px solid salmon;
+  /* el borde es solido y de 1 pixel de grosor, importante que sea solido o no se va a ver */
+}
+
+/* LOS ITEMS SE MUEVEN EN DIRECCIÓN LA VERTICAL DEL EJE Y PARALELOS AL EJE X */
+.container-h {
+  width: 500px;
+  height: 500px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  /* con flex-direction indico cual es el eje principal, si flex-direction: row el principal será el horizontal y si flex-direction: column, será el vertical  */
+
+  /* justify-content se aplica al EJE PRINCIPAL, es decir todo lo que ocurra será en esa dirección */
+  justify-content: flex-start;
+}
+
+.item-h {
+  box-sizing: border-box;
+  width: 100%;
+  /* se pone un width del 100% para aprovechar todo el ancho */
+  height: 20px;
+  /* la altura son 20px, son finitos */
+  background-color: peachpuff;
+  border: 1px solid salmon;
+  /* el borde es solido y de 1 pixel de grosor, importante que sea solido o no se va a ver */
+}

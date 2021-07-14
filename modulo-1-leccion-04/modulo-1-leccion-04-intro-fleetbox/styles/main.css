@@ -1,0 +1,60 @@
+* {
+  font-family: "Roboto", sans-serif;
+  color: #666;
+}
+
+.page {
+  margin: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.container {
+  background: url("../images/container-bg.png") #ddd;
+}
+
+.item {
+  background: pink;
+  font-size: 36px;
+}
+
+/* flex */
+
+.container {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  /* con flex-direction indico cual es el eje principal, si flex-direction: row el principal será el horizontal y si flex-direction: column, será el vertical  */
+
+  /* justify-content se aplica al EJE PRINCIPAL, es decir todo lo que ocurra será en esa dirección */
+  justify-content: space-evenly;
+
+  /* align-items funciona tal cual justify-content pero en el EJE SECUNDARIO */
+  align-items: center;
+}
+
+.item {
+  box-sizing: border-box;
+  width: 100px;
+  /* si se pone un width del 100% aprovechará todo el espacio */
+  height: 100px;
+  border: 5px solid #666;
+}
+
+.item-3 {
+  align-self: flex-end;
+  /* La propiedad align-self coloca al item-3 en una posición determinada, en este caso flex-end lo coloca en la parte baja del container */
+}
+
+.item-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.item-2 {
+  order: 1;
+  /* el order es un concepto que hace que segun "pesa" cada objeto se va a reordenar. Los objetos por defecto pesan order: 0, esto quiere decir que si un objeto pesa order:0 y otro order: 1 pues el order:1 estará a la derecha del de order:0. Si queremos que el objeto se vaya a su izquierda debera pesar menos de 0, en este caso order:-1 */
+}
