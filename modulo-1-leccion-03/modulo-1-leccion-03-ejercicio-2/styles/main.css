@@ -4,22 +4,23 @@ div {
   height: 100px;
 }
 
-/* block me muestra los elementos uno debajo de otro, deberian de ocupar todo el espacio de la pantalla pero al haberles impuesto un tamaño fijo de 100x100 se ajustan a dicho tamaño */
-.item {
-  display: block;
-}
+/* 1. block me muestra los elementos uno debajo de otro, deberian de ocupar todo el espacio de la pantalla pero al haberles impuesto un tamaño fijo de 100x100 se ajustan a dicho tamaño */
 
-/* inline muestra los 3 elementos uno al lado del otro ocupando el espacio justo de dichos elementos */
 /* .item {
-  display: inline;
+  display: block;
 } */
 
-/* inline-block me muestra cajitas una al lado de otra */
+/* 2. inline muestra los 3 elementos uno al lado del otro ocupando el espacio justo de dichos elementos */
+.item {
+  display: inline;
+}
+
+/* 3. inline-block me muestra cajitas una al lado de otra */
 /* .item {
   display: inline-block;
 } */
 
-/* none no me muestra nada */
+/* 4. none no me muestra nada */
 /* .item {
   display: none;
 } */

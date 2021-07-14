@@ -1,0 +1,38 @@
+:root {
+  --white-letters: white;
+  --black-letters: black;
+  --header: black;
+}
+.header {
+  background-color: black;
+  color: var(--white-letters);
+}
+h3 {
+  color: var(--white-letters);
+}
+
+.section-blue {
+  background-color: cornflowerblue;
+  color: var(--white-letters);
+}
+.small-letter {
+  font-size: 10px;
+}
+
+.button {
+  background: grey;
+  border-radius: 20px;
+  color: var(--white-letters);
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 10px 20px;
+  text-decoration: none;
+  /* margin-left: auto; */
+  text-align: center;
+}
+.button--new {
+  background: green;
+}
+
+.section-white {
+}
