@@ -1,0 +1,42 @@
+:root {
+  --tipoDeLetra: Arial;
+  --ancho: 400px;
+}
+
+.box {
+  background-color: lightpink;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 10px;
+  border: solid 20px red;
+  box-sizing: border-box;
+  font-family: var(--tipoDeLetra);
+}
+.box1 {
+  background-image: ("../images/logo-adalab.svg");
+  /* background-color: lightpink; */
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 10px;
+  border: solid 20px red;
+  box-sizing: border-box;
+  font-family: var(--tipoDeLetra);
+}
+
+.linea {
+  background-color: brown;
+  width: 250px;
+}
+
+.main {
+  border: solid 20px black;
+  width: 340px;
+}
+.box:hover {
+  background-color: chartreuse;
+}
+.box1:hover {
+  background-color: chartreuse;
+}
