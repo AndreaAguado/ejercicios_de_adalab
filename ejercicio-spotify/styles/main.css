@@ -6,6 +6,7 @@
 .header {
   background-color: black;
   color: var(--white-letters);
+  width: 100%;
 }
 h3 {
   color: var(--white-letters);
@@ -14,6 +15,7 @@ h3 {
 .section-blue {
   background-color: cornflowerblue;
   color: var(--white-letters);
+  width: 100%;
 }
 .small-letter {
   font-size: 10px;
@@ -33,5 +35,5 @@ h3 {
 .button--new {
   background: green;
 }
-.section-white {
-}
+/* .section-white {
+} */

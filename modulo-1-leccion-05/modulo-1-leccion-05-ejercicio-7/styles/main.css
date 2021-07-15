@@ -1,0 +1,13 @@
+body {
+  text-align: justify;
+  background-color: papayawhip;
+  margin: 20px;
+}
+.text {
+  width: 86%;
+  background-color: hotpink;
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: dashed crimson 5px;
+}

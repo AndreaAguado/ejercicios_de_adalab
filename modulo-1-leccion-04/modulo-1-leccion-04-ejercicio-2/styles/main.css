@@ -1,0 +1,18 @@
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: thistle;
+  border: 1px solid slateblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item {
+  width: 100px;
+  height: 50px;
+  background-color: slateblue;
+  border: 1px solid black;
+  box-sizing: border-box;
+}

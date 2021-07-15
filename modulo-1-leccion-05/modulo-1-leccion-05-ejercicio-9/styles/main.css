@@ -1,0 +1,39 @@
+body {
+  border: 5px coral solid;
+  background-color: lightskyblue;
+  align-items: center;
+}
+.content {
+  width: 50%;
+  margin-top: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: lightpink;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  transform: translate(55px, -80%px);
+}
+.author {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.parag {
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+
+.link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+}
