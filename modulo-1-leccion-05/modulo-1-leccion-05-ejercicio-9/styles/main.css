@@ -4,17 +4,16 @@ body {
   align-items: center;
 }
 .content {
+  margin: auto;
   width: 50%;
   margin-top: 106px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  margin-bottom: 106px;
   background-color: lightpink;
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  transform: translate(55px, -80%px);
+
+  /* position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -25%); */
 }
 .author {
   font-size: 18px;

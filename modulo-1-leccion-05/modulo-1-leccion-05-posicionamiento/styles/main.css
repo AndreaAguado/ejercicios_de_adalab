@@ -1,0 +1,25 @@
+.menu {
+  padding: 12px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.item {
+  display: inline-block;
+  background-color: lightgreen;
+  padding: 5px;
+}
+
+.item:hover {
+  background-color: lightpink;
+}
+
+.indice {
+  margin-top: 100px;
+}
+.flotante {
+  position: fixed;
+  /* bottom: 50px;
+  right: 50px; */
+}
