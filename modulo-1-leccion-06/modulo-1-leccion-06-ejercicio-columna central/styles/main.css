@@ -1,0 +1,45 @@
+body {
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+.page__wrapper {
+  margin: 0 25px;
+  background: rgba(0, 255, 255, 0.2);
+}
+@media all and (min-width: 768px) {
+  .page__wrapper {
+    margin: 0 48px;
+  }
+}
+@media all and (min-width: 1140px) {
+  .page__wrapper {
+    max-width: 870px;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  color: white;
+  background: blue;
+  height: 200px;
+}
+.hero .page__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page__footer {
+  background: black;
+  color: white;
+  padding: 20px 0;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page__main {
+  flex-grow: 1;
+}

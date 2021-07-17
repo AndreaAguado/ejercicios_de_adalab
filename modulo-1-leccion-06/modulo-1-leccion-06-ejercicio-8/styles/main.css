@@ -1,0 +1,15 @@
+body {
+  background-color: crimson;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    background-color: gold;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body {
+    background-color: palegreen;
+  }
+}

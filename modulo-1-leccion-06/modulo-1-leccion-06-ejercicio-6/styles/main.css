@@ -1,0 +1,50 @@
+/* valores default */
+.container {
+  background-color: powderblue;
+  margin: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* casos especiales */
+@media all and (min-width: 768px) {
+  .container {
+    background-color: plum;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .paragraph {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media all and (min-width: 1140px) {
+  .container {
+    background-color: pink;
+    margin-top: 190px;
+    margin: auto;
+    max-width: 750px;
+  }
+  .title {
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .paragraph {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
