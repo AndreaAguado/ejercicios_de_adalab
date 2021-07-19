@@ -6,17 +6,16 @@
   --dark-grey: #54585a;
   --light-grey: #b8b8b9;
   --grey-bg: #f1f1f1;
-  --rosa: pink;
-  /* --main-font: Open Sans, sans-serif;
-  --second-font: Rubik, sans-serif; */
+  --main-font: Open Sans, sans-serif;
+  --second-font: Rubik, sans-serif;
 }
 
 /* START HEADER  */
 
 .tittle {
-  background-color: #099d8d;
+  background-color: var(--dark-green);
   opacity: 0.95;
-  color: white;
+  color: var(--white);
   display: flex;
   position: fixed;
   align-items: center;
@@ -24,25 +23,30 @@
   box-sizing: border-box;
   width: 100%;
   height: 60px;
-  border: 1px solid #b8b8b9;
+  border: 1px solid var(--light-grey);
   text-transform: uppercase;
-  z-index: 2;
   font-family: var(--second-font);
   font-size: 16px;
+  line-height: 30px;
+  z-index: 2;
 }
+
 .links-menu {
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 .menu {
-  background-color: #14d9c4;
+  background-color: var(--light-green);
+  padding: 20px;
   opacity: 0.95;
   box-sizing: border-box;
   width: 100%;
   height: 45px;
-  border: 1px solid #b8b8b9;
+  border: 1px solid var(--light-grey);
   position: fixed;
   transform: translate(0, 130%);
+  font-family: var(--second-font);
+  font-size: 15px;
   z-index: 2;
 }
 .menu-nietos {
@@ -59,10 +63,6 @@
 /* START HERO */
 
 .container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -72,7 +72,6 @@
   top: 0px;
   width: 100%;
   height: 421px;
-  /* z-index: -1; */
 }
 
 /* END HERO */
@@ -81,8 +80,6 @@
 .motto-container {
   position: absolute;
   z-index: 1;
-  /* width: 290px;
-  height: 80px; */
   top: 387px;
   background-color: var(--white);
   display: flex;
@@ -106,11 +103,7 @@
 
 /* START ABOUT US */
 .about-us {
-  /* position: relative; */
-  /* margin-top: 30px; */
-  /* height: 504px; */
   background-color: var(--white);
-  /* top: -65px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,29 +112,20 @@
   margin-left: auto;
 }
 .about-us-container {
-  /* position: relative; */
-  /* top: 40px; */
   text-align: center;
-  /* width: 290px; */
   background-color: var(--white);
   padding-bottom: 30px;
-  /* margin-left: 15px;
-  margin-right: 15px; */
 }
 
 .about-us-title {
   position: relative;
-  /* top: 30px; */
   text-align: center;
-  /* margin-top: 30px; */
   margin-top: 497px;
   margin-bottom: 15px;
-  /* margin-left: 116.5px;
-  margin-right: 114.5px; */
   margin-right: auto;
   margin-left: auto;
   color: var(--light-green);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
@@ -162,21 +146,104 @@
   flex-direction: row;
   justify-content: center;
   transform: rotate(45deg);
-  /* margin-left: auto;
-  margin-right: auto;
-  transform: translate(145px, 66px) rotate(45deg); */
   width: 30px;
   height: 30px;
   background-color: #14d9c4;
   margin-top: -30px;
 }
-/* .square {
-  position: absolute;
-  z-index: 1;
-  transform: translate(50%, 100%) rotate(45deg);
-  width: 30px;
-  height: 30px;
-  background-color: #14d9c4;
-} */
 
 /* END SQUARE */
+
+/* START ADALABERS */
+
+.members {
+  background-color: var(--white);
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+#who-we-are {
+  color: var(--dark-green);
+  font-weight: 500;
+  font-size: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.foto_adalaber1 {
+  width: 180px;
+  height: 180px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+}
+
+.foto_adalaber {
+  width: 180px;
+  height: 180px;
+  padding-bottom: 15px;
+  padding-top: 45px;
+  border-radius: 20px;
+}
+
+.parr {
+  color: var(--dark-grey);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.style_name {
+  color: var(--black);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.icon_sm {
+  font-size: small;
+  padding-top: 15px;
+}
+
+.icon_color {
+  color: var(--dark-green);
+}
+
+/* END ADALABERS */
+
+/* STRENGTHS AND WEAKNESSES */
+
+/* END STRENGTHS AND WEAKNESSES */
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+  border: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.nombre {
+  width: 172px;
+  height: 20;
+  color: #b8b8b9;
+  font-size: 14px;
+  font-family: var(--main-font);
+}
+.footer-nav {
+  width: 100%;
+  height: 60px;
+}
+.footer-menu {
+  text-decoration: none;
+  color: #54585a;
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+.image {
+  width: 115.9px;
+  height: 45px;
+}
+
+/* END FOOTER */
