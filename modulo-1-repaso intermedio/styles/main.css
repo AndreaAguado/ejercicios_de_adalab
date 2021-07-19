@@ -1,0 +1,65 @@
+:root {
+  --fire-engine-red: #cc212a;
+  --my-font: "Montserrat", sans-serif;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  font-family: var(--my-font);
+  font-weight: bold;
+  color: var(--fire-engine-red);
+}
+.footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  width: 100%;
+  height: 80px;
+  font-size: 16px;
+  font-family: var(--my-font);
+  font-weight: bold;
+  color: var(--fire-engine-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid var(--fire-engine-red);
+}
+.copy {
+  font-family: var(--my-font);
+  color: gray;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.circle {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  background-color: var(--fire-engine-red);
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+/* Para tablets/desktop */
+
+@media all and (min-width: 780px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+  }
+}
