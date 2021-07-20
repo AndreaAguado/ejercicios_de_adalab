@@ -1,10 +1,11 @@
 :root {
   --fire-engine-red: #cc212a;
   --my-font: "Montserrat", sans-serif;
+  --size-icon: 50px;
 }
 
 .main {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +23,7 @@
   z-index: 1;
   bottom: 0px;
   width: 100%;
-  height: 80px;
+  height: 10vh;
   font-size: 16px;
   font-family: var(--my-font);
   font-weight: bold;
@@ -35,21 +36,24 @@
 }
 .copy {
   font-family: var(--my-font);
-  color: gray;
-  font-weight: lighter;
+  font-weight: 300;
   text-transform: uppercase;
   margin-top: 10px;
+  color: black;
 }
 .circle {
   position: absolute;
   z-index: 1;
-  bottom: 50px;
+  bottom: 44px;
   background-color: var(--fire-engine-red);
   color: white;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  font-family: var(--my-font);
+  width: var(--size-icon);
+  height: var(--size-icon);
+  line-height: var(--size-icon);
+  /* TRUCO: si se pone un line-height del mismo tamaño del width y el height el texto de dentro quedara centrado */
   border-radius: 50px;
+  /* Se puede poner la mitad del tamaño, el 50% del tamaño o usar calc(--size-icon/2) pero usar border-radius:50% es la mejor*/
   text-align: center;
 }
 
@@ -57,9 +61,13 @@
 
 @media all and (min-width: 780px) {
   .footer {
-    display: flex;
     flex-direction: row;
-    justify-content: right;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .circle {
+    position: static;
+    order: 1;
+    /* margin-right: 20px; */
   }
 }
