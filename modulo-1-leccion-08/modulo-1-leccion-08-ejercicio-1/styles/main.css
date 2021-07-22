@@ -1,0 +1,43 @@
+:root {
+  --font-color: #010101;
+  --bg-color: yellow;
+  --main-bg-color: cyan;
+  --font-size: 18px;
+  --font-family: arial, sans-serif;
+  --height: 50px;
+}
+body {
+  color: var(--font-color);
+  display: flex;
+  font: var(--font-family), var(--font-size);
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+.wrapper {
+  margin: 0 40px;
+}
+.header {
+  background: var(--bg-color);
+  height: var(--height);
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.main {
+  background: var(--main-bg-color);
+  flex: 1;
+}
+.main__title {
+  color: #fff;
+  font-size: 2.5em;
+}
+.main__content p {
+  font-size: 1.1em;
+  line-height: 140%;
+}
+.footer {
+  background: var(--bg-color);
+  height: var(--height);
+  padding: 10px 0;
+  box-sizing: border-box;
+}
