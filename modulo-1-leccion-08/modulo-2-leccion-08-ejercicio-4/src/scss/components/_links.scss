@@ -1,0 +1,9 @@
+.button {
+  background-color: $button-color;
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    background: $color-secondary;
+    color: white;
+  }
+}
