@@ -1,0 +1,38 @@
+:root {
+  --main-color: white;
+  --main-font: "Times New Roman", Times, serif;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  background-color: pink;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  height: 20vh;
+}
+.menu {
+  background-color: rebeccapurple;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  height: 60vh;
+}
+.content {
+  background-color: indianred;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  height: 60vh;
+}
+.footer {
+  background-color: skyblue;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  height: 20vh;
+}
