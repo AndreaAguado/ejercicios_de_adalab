@@ -1,0 +1,11 @@
+/* .row1 {
+  background-color: hotpink;
+  height: 10vh;
+} */
+.col-md-1 {
+  background-color: hotpink;
+  height: 10vh;
+}
+.row {
+  width: 100vw;
+}
