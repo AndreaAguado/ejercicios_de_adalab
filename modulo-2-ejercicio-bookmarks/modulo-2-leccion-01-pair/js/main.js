@@ -28,6 +28,17 @@ newData.classList.remove("hidden");
 // tagDest.innerHTML = newTag.innerHTML;
 
 
+// DÍA 3: TABLEVIEW Y LISTVIEW
+const dataView = document.querySelector('.js_data_view');
+
+if (dataView.classList.contains('tableview')){
+    dataView.classList.remove('tableview');
+    dataView.classList.add('listview');
+}
+else if (dataView.classList.contains('listview')){
+    dataView.classList.remove('listview');
+    dataView.classList.add('tableview');
+}
 
 
 
