@@ -11,10 +11,10 @@ function getEl (selector) {
 
 function isEven(num){
     if ( num % 2 === 0 ){
-        console.log(`El número introducido es par.`);
+        console.log(`El número ${num} es PAR.`);
     }
     else {
-        console.log(`El número introducido es impar.`);
+        console.log(`El número ${num} es IMPAR.`);
     }
 }
 
