@@ -10,7 +10,7 @@ function dogToHuman (dogAge){
         return console.log(`Tu perro tiene ${15+9} años humanos`);
     }
     else {
-        let newAge = (dogAge - 2)*5;
+        let newAge = (dogAge - 2)*5 + 15 + 9;
         return console.log(`Tu perro tiene ${newAge} años humanos`);
     }
 }
