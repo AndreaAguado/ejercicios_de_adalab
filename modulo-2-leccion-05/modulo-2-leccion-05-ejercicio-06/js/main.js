@@ -20,5 +20,4 @@ function updateInfo(event){
     console.log(event.currentTarget.value);
 }
 
-input.addEventListener('keydown', updateInfo);
-
+input.addEventListener('keyup', updateInfo);
