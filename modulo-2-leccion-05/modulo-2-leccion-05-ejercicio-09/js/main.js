@@ -14,23 +14,19 @@ function selectTeacher (event){
 
     const teacherSelected = event.currentTarget;
     console.log(teacherSelected);
-    const aux = teacherSelected.querySelector('.teacher');
-    aux.classlist.toggle('teacher--selected');
-    teacherSelected.classlist.toggle('teacher--selected');
+    teacherSelected.classList.toggle('teacher--selected');
 
-    const fav = event.currentTarget;
+    const fav = teacherSelected.querySelector('.favorite');
     console.log(fav);
 
-    if (fav.toUpperCase === 'QUITAR'){
-        fav.querySelector('.favorite').innerHTML = 'Añadir';
+    if (fav.innerHTML === 'Quitar'){
+        fav.innerHTML = 'Añadir';
     } 
     else{
-        fav.querySelector('.favorite').innerHTML = 'Quitar';
+        fav.innerHTML = 'Quitar';
     }
 }
 
 teacher1.addEventListener('click',selectTeacher);
 teacher2.addEventListener('click',selectTeacher);
 teacher3.addEventListener('click',selectTeacher);
-
-fav1.addEventListener('click', selectTeacher);
