@@ -13,7 +13,7 @@ const movies = [];
 function inputHandler (){
     movies [0] = input1.value;
     movies [1] = input2.value;
-   
+  
     console.log(movies);
     for (const movie of movies) {
         console.log('A mi también me encanta ' + movie + '. Tenemos mucho en común!');           

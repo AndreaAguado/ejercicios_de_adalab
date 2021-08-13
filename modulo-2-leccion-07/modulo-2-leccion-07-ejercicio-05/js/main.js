@@ -6,6 +6,7 @@ let numbers = [20, 54, 76, 33, 100];
 let sum = 0;
 for (let i = 0; i < 5; i++ ) {
     sum += numbers[i];
+    console.log(sum);
 }
 
 let media = sum / 5;
