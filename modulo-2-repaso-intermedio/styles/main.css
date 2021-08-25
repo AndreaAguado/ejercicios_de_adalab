@@ -1,5 +1,4 @@
 .body {
-  background-color: #ffcc00;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,6 +12,9 @@
 }
 .odd {
   background-color: #ff9900;
+}
+.even {
+  background-color: #ffcc00;
 }
 .inputs {
   /* background-color: blueviolet; */
