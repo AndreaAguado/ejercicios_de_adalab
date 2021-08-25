@@ -6,7 +6,7 @@ const smiley = document.querySelector('.js_title');
 
 const select = document.querySelector('.js_select');
 
-const body = document.querySelector('.body');
+const body = document.querySelector('.js_body');
 
 function changeMood (){
     smiley.innerHTML = select.value;
@@ -19,4 +19,4 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-  updateButton.addEventListener('click', changeMood);
+updateButton.addEventListener('click', changeMood);
