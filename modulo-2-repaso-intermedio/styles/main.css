@@ -38,6 +38,10 @@
   font-weight: bold;
 }
 
+/* .select {
+  -webkit-appearance: none;
+} */
+
 .update {
   background-color: cornflowerblue;
   color: white;
