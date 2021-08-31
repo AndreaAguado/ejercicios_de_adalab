@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: hotpink;
+  position: fixed;
+  font-size: 30px;
+  color: indigo;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header__link {
+  margin: 20px;
+  text-decoration: none;
+}
+.section {
+  padding: 20px 30px 20px 30px;
+}
+.section-1 {
+  background-color: lightgreen;
+}
+.section-2 {
+  background-color: lightpink;
+}
+.section-3 {
+  background-color: lightskyblue;
+}
