@@ -4,6 +4,8 @@ const menuDropdown = document.querySelector(".js_menu_dropdown");
 
 const newData = document.querySelector(".data-actions__add");
 
+const burger = document.querySelector('.header__menu');
+
 // aquí van las variables que tienen la info ingresada por el usuario
 const urlDest = document.querySelector(".data-actions__input");
 const checkDest = document.querySelector(".item__seen");
@@ -17,8 +19,8 @@ const newDesc = document.querySelector(".js_new_desc");
 const newTag = document.querySelector(".js_new_tags");
 
 
-menuDropdown.classList.add("collapsed");
-menuDropdown.classList.remove("collapsed");
+// menuDropdown.classList.add("collapsed");
+// menuDropdown.classList.remove("collapsed");
 
 newData.classList.remove("hidden");
 
@@ -41,6 +43,21 @@ else if (dataView.classList.contains('listview')){
 }
 
 
+// 31/08/21 menu collapsed:
+
+function collapseMenu (event){
+    event.preventDefault();
+    console.log('estoy dentro');
+    menuDropdown.classList.toggle('collapsed');
+    // if (menuDropdown.classList.contains('collapsed')){
+    //     menuDropdown.classList.remove('collapsed');
+    // }
+    // else{
+    //     menuDropdown.classList.add('collapsed');
+    // }    
+}
+
+burger.addEventListener('click', collapseMenu);
 
 
 
