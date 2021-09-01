@@ -14,7 +14,15 @@ const tasks = [
   ];
 
   function writeTasks (tasks) {
-      list.innerHTML += `<li> ${tasks[0].name} </li>`;
+      for (let index = 0; index < tasks.length; index++) {
+        if (tasks[index].completed){
+            list.innerHTML += `<li class = crossed> ${tasks[index].name} </li>`;
+        }
+        else {
+            list.innerHTML += `<li> ${tasks[index].name} </li>`;
+        }
+      }
+      
   }
 
   writeTasks(tasks);
