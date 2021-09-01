@@ -28,7 +28,18 @@ const tasks = [
   writeTasks(tasks);
 
   function updateSubtitle(tasks) {
-      subtitle.innerHTML = `Tienes ${ tasks.length} tareas: Y terminadas y Z por terminar`;
+      let completed = 0;
+      let pending = 0;
+      for (let index = 0; index < tasks.length; index++) {
+          if(tasks[index].completed){
+              completed++;
+          }
+          else {
+              pending++;
+          }
+          
+      }
+      subtitle.innerHTML = `Tienes ${ tasks.length} tareas: ${completed} terminadas y ${pending} por terminar`;
   }
 
   updateSubtitle(tasks);
