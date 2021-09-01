@@ -16,10 +16,16 @@ const tasks = [
   function writeTasks (tasks) {
       for (let index = 0; index < tasks.length; index++) {
         if (tasks[index].completed){
-            list.innerHTML += `<li class = crossed> ${tasks[index].name} </li>`;
+            list.innerHTML += ` <div class ="item">
+            <li class ="crossed"> ${tasks[index].name} </li>
+            <input class="check" type="checkbox">
+            </div>`;
         }
         else {
-            list.innerHTML += `<li> ${tasks[index].name} </li>`;
+            list.innerHTML += `<div class ="item">
+            <li> ${tasks[index].name} </li> 
+            <input class="check" type="checkbox">
+            </div>`;
         }
       }
       
@@ -36,8 +42,7 @@ const tasks = [
           }
           else {
               pending++;
-          }
-          
+          }          
       }
       subtitle.innerHTML = `Tienes ${ tasks.length} tareas: ${completed} terminadas y ${pending} por terminar`;
   }

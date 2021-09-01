@@ -17,3 +17,12 @@
 .crossed {
   text-decoration: line-through;
 }
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.check {
+  margin-left: 10px;
+}
