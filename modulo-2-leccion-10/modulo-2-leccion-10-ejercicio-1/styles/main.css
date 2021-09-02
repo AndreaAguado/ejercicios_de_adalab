@@ -1,0 +1,32 @@
+.body {
+  height: 100vh;
+  background-color: lavenderblush;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.button {
+  width: 150px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  background-color: indigo;
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.number {
+  font-size: 30px;
+}
+
+.pass {
+  color: blue;
+}
