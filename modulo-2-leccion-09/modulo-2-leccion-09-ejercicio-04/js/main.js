@@ -3,8 +3,8 @@
 const list = document.querySelector('.js_list');
 const subtitle = document.querySelector('.js_subtitle');
 
-const listItem = document.querySelector('.list-item');
-const checkbox = document.querySelector('.check');
+// const listItem = document.querySelector('.list-item');
+// const checkbox = document.querySelector('.check');
 
 const tasks = [
     { name: 'Recoger setas en el campo', completed: true },
@@ -31,7 +31,13 @@ const tasks = [
             </div>`;
         }
       }      
+      const listItem = document.querySelectorAll('.list-item');
+      for (const item of listItem) {
+        item.addEventListener('click',handleCheckbox);      
+      }
   }
+
+
   writeTasksList(tasks);
 
   function crossCompletedTasks (tasks) {
@@ -62,7 +68,7 @@ const tasks = [
   updateSubtitle(tasks);
 
 
-  function handleCheckbox (event) {
+  function handleCheckbox1 (event) {
       console.log('estoy dentro');
       let clicked = event.target;
       console.log(clicked);
@@ -70,11 +76,34 @@ const tasks = [
         // listItem.classList.add('crossed');  
         // tasks.completed = true;
         clicked.toggleAttribute('checked'); //toggleAttribute add the attribute checked if it is NOT there and takes it out if it IS there
+        list.innerHTML += ` <div class ="item">
+        <li class ="list-item crossed"> ${tasks.name} </li>
+        <input class="check">
+        </div>`;
       }
       else{ 
         clicked.toggleAttribute('checked'); 
       }
 
+    updateSubtitle(tasks); //cuando se haya hecho check se actualiza el numero de tareas hechas/por hacer
   }
 
-  list.addEventListener('click',handleCheckbox);
+  function handleCheckbox(event) {
+    console.log('estoy dentro');
+    let clicked = event.target;
+    clicked = event.currentTarget;
+    console.log(clicked);
+    if(clicked.completed) {
+      clicked.completed = 'false';
+      // clicked.toggleAttribute('checked'); 
+    }
+    else {
+      clicked.completed = 'true';
+    }
+    updateSubtitle(tasks); //cuando se haya hecho check se actualiza el numero de tareas hechas/por hacer
+
+  }
+
+
+
+  // list.addEventListener('click',handleCheckbox);
