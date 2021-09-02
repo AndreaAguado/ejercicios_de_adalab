@@ -7,6 +7,7 @@ const createPromise = () =>
 
 function getBreedImages () {
   const promises = [createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise()];
+//   const promises = [createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(), createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise(),createPromise(), createPromise()];
   Promise.all(promises)
     .then(responses => {
       for (let i = 0; i < responses.length; i++) {
