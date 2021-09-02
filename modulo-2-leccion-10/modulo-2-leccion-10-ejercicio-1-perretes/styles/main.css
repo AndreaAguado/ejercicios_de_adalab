@@ -2,8 +2,8 @@
   padding: 30px 30px 30px 30px;
   height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -17,4 +17,8 @@
   font-weight: bold;
   font-size: 18px;
   margin: 30px 10px 30px 10px;
+}
+
+.img {
+  size: 45%;
 }
