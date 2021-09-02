@@ -20,18 +20,24 @@ function getGithubOrg() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        return fetch('https://api.github.com/orgs/Adalab/repos');
+        return fetch(url + '/repos');
       })
       .then(reposResponse => reposResponse.json())
       .then(reposName => {
         const namesList = document.querySelector('.js-list');
-        console.log(reposName);
-        for (const item of reposName) {
-          namesList.innerHTML += `<li class="list-item">${item.name}</li>`;
+        if(reposName.message === 'Not Found'){
+          namesList.innerHTML = `<li class="list-item">Ese nombre de organización es inválido</li>`;
         }
+        else {
+          updateTitle();
+          for (const item of reposName) {
+       
+            namesList.innerHTML += `<li class="list-item">${item.name}</li>`;
+          }
+        }
+      
       })
   } 
 
 input.addEventListener('change',getURL);
 submitButton.addEventListener('click', getGithubOrg);
-submitButton.addEventListener('click',updateTitle);
