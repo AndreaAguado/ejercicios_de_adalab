@@ -19,7 +19,7 @@ function getGithubUser() {
         name.innerHTML = data.login;
         const img = document.querySelector('.js-img');
         img.src = data.avatar_url;
-        img.alt = `Avatar de ${name}`;
+        img.alt = 'Avatar de ' + name.innerHTML;
         const nRepos = document.querySelector('.js-repos');
         nRepos.innerHTML = data.public_repos;
       });
