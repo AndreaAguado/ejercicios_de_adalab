@@ -7,7 +7,6 @@ const title = document.querySelector('.js-subtitle');
 function getURL (){
     let org = input.value;
     let url = 'https://api.github.com/orgs/' + org;
-    console.log(url);
     return url;
 }
 
@@ -21,14 +20,16 @@ function getGithubOrg() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        const name = document.querySelector('.js-name');
-        name.innerHTML = data.login;
-        const img = document.querySelector('.js-img');
-        img.src = data.avatar_url;
-        img.alt = 'Avatar de ' + name.innerHTML;
-        const nRepos = document.querySelector('.js-repos');
-        nRepos.innerHTML = data.public_repos;
-      });
+        return fetch('https://api.github.com/orgs/Adalab/repos');
+      })
+      .then(reposResponse => reposResponse.json())
+      .then(reposName => {
+        const namesList = document.querySelector('.js-list');
+        console.log(reposName);
+        for (const item of reposName) {
+          namesList.innerHTML += `<li class="list-item">${item.name}</li>`;
+        }
+      })
   } 
 
 input.addEventListener('change',getURL);
