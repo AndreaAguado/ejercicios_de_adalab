@@ -1,0 +1,38 @@
+.body {
+  height: 100vh;
+  padding: 30px 30px 30px 30px;
+  background-color: midnightblue;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: goldenrod;
+}
+.title {
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 50px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hotpink;
+  height: 100%;
+}
+.input {
+  margin-bottom: 30px;
+}
+.char-list {
+  margin-top: 30px;
+}
+.list-item {
+  font-size: 18px;
+  margin: 10px 0 10px 0;
+}
+.footer {
+  height: 10%;
+}
