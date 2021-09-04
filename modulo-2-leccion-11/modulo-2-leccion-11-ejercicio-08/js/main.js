@@ -33,7 +33,10 @@ function handleButton () {
         if(characters.next !== null){
             buttonNext.classList.remove('hidden');
         }
+        saveToLocalStorage(input.value,people);
+        console.log(input.value, people);
     })
+
 }
 
 let page = 2;
@@ -58,14 +61,10 @@ function handleButton2 () {
         else {
             buttonNext.classList.add('hidden');
         }
-
+       
     })
     
 }
-
-button.addEventListener('click', handleButton);
-
-buttonNext.addEventListener('click', handleButton2);
 
 function urlMaker(input){
     const url = 'https://swapi.dev/api/people/?search=' + input ;
@@ -77,3 +76,20 @@ function addNextPage(input, page){
     let url = urlBeggining + '&page=' + page;
     return url;
 }
+
+function saveToLocalStorage(input, information) {
+    let key = `'${input}'` ;
+    console.log(key);
+    localStorage.setItem(key, JSON.stringify(information));
+}
+function getFromLocalStorage(input){
+    let key = `'${input}'` ;
+    let savedInfo = JSON.parse(localStorage.getItem(key));
+    return savedInfo; 
+}
+
+
+
+button.addEventListener('click', handleButton);
+
+buttonNext.addEventListener('click', handleButton2);
