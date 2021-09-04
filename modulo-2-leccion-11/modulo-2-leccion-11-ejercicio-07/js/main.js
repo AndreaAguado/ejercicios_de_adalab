@@ -16,10 +16,11 @@ function handleInput(event) {
 
 function hasContent () {
     const data = JSON.parse(localStorage.getItem('userData'));
-    console.log(data);
-    inputs[0].value = data[0];
-    inputs[1].value = data[1];
-    paragraph.innerHTML = data[0] + ' ' + data[1];
+    if(data !== null){
+        inputs[0].value = data[0];
+        inputs[1].value = data[1];
+        paragraph.innerHTML = data[0] + ' ' + data[1];
+    }
 }
 
 hasContent();
