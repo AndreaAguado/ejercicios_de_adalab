@@ -15,6 +15,9 @@
 .main {
   padding: 30px 30px 30px 30px;
 }
+.radio {
+  margin-bottom: 5px;
+}
 .text {
   font-size: 16px;
   line-height: 20px;
