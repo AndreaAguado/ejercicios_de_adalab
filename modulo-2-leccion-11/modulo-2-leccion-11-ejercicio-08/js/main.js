@@ -27,6 +27,7 @@ function handleButton () {
     }
 }
 
+//if requested info is not in local storage a petition is made to the API using requestAPI(url)
 function requestAPI(url){
     fetch(url)
     .then(response => response.json())
@@ -56,7 +57,7 @@ function writeInPage(characters) {
 
 let page = 2;
 
-//If there were more pages to show, a second button would appear to fetch said pages, handleButton2 () is the function in charge of that
+//If there were more pages to show, a second button would appear to fetch said pages, handleButton2 () is the function in charge of that when that button is clicked 
 function handleButton2 () {
     console.log('estoy aqui');
     let url = addNextPage(input.value, page);
