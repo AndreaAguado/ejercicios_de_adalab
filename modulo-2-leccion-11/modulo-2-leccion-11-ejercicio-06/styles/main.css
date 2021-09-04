@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  background-color: rgb(194, 255, 194);
+  padding: 30px 30px 30px 30px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.text {
+  margin-top: 20px;
+}
