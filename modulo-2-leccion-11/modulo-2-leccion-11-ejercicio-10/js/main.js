@@ -2,7 +2,8 @@
 
 const image = document.querySelector('.js-img');
 
-fetch('https://api.thecatapi.com/v1/images/search?format=json', {
+function requestKittens() {
+    fetch('https://api.thecatapi.com/v1/images/search?format=json', {
   headers: {
     "x-api-key": "c33dc4111cbf4beb813929ee97a3f362",
   }
@@ -13,7 +14,8 @@ fetch('https://api.thecatapi.com/v1/images/search?format=json', {
     showImage(data);
 
   });
-
-  function showImage(data) {
-      image.setAttribute('src',data[0].url);
-  }
+}
+requestKittens();
+function showImage(data) {
+    image.setAttribute('src',data[0].url);
+}
