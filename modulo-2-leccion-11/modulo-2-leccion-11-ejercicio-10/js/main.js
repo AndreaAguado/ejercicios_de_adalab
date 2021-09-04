@@ -1,6 +1,6 @@
 'use strict';
 
-const image = document.querySelector('.img');
+const image = document.querySelector('.js-img');
 
 fetch('https://api.thecatapi.com/v1/images/search?format=json', {
   headers: {
