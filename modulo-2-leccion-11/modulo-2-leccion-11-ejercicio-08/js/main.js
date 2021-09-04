@@ -22,7 +22,6 @@ function handleButton () {
     else{
         console.log('No estaba en localStorage');
         let url = urlMaker(input.value);
-        console.log(url);
         requestAPI(url);
     }
 }
@@ -32,7 +31,6 @@ function requestAPI(url){
     fetch(url)
     .then(response => response.json())
     .then(characters => {
-        console.log(characters);
         writeInPage(characters);
     })
 }
@@ -59,28 +57,38 @@ let page = 2;
 
 //If there were more pages to show, a second button would appear to fetch said pages, handleButton2 () is the function in charge of that when that button is clicked 
 function handleButton2 () {
-    console.log('estoy aqui');
-    let url = addNextPage(input.value, page);
-    console.log(url);
-    fetch(url)
-    .then(response => response.json())
-    .then(characters => {
-        console.log(characters);
-        console.log(characters.next);
-        const people = characters.results;
-            // list.innerHTML = '';
-            for (let i = 0; i < people.length; i++) {
-            list.innerHTML += `<li class="list-item">${people[i].name} : ${people[i].gender}</li>`;     
-        }
-        if(characters.next !== null){
-            page++;
-        }
-        else {
-            buttonNext.classList.add('hidden');
-        }
-       
-    })
-    
+    let newKey = input.value + '&page=' + page;
+    if( isInLocalStorage(newKey)){
+        console.log('Ya estaba en localStorage');
+        let info = getFromLocalStorage(newKey);
+        writeAdditionalPages(info);
+    }
+    else{
+        console.log('No estaba en localStorage');
+        let url = addNextPage(input.value, page);
+        fetch(url)
+        .then(response => response.json())
+        .then(characters => {
+            console.log(characters);
+            console.log(characters.next);
+            writeAdditionalPages(characters);       
+        })
+    } 
+}
+
+function writeAdditionalPages(characters){
+    const people = characters.results;
+    for (let i = 0; i < people.length; i++) {
+    list.innerHTML += `<li class="list-item">${people[i].name} : ${people[i].gender}</li>`;     
+}
+saveToLocalStorage(input.value + '&page=' + page, characters);
+if(characters.next !== null){
+    page++;
+}
+else {
+    buttonNext.classList.add('hidden');
+}
+
 }
 
 //urlMaker(input) creates the URL fetch will use according to what the user introduced in the browser
