@@ -12,6 +12,7 @@ function requestToDogAPI(){
     })
 }
 
+
 function retrieveBreeds(breeds){
     let breedsList = [];
     let index = 0;
@@ -20,10 +21,18 @@ function retrieveBreeds(breeds){
         index++;
       }
       console.log(breedsList);
-
+    //   return breedsList;
+      calcMax(breedsList);
 }
-function requestRandomNum(){
-    fetch('https://api.rand.fun/number/integer')
+
+function calcMax(array){
+    let max = array.length;
+    console.log(max);
+    requestRandomNum(max);
+}
+
+function requestRandomNum(max){
+    fetch('https://api.rand.fun/number/integer?max='+max)
     .then( response => response.json())
     .then( randomNumbers => {
         console.log(randomNumbers);
@@ -31,4 +40,3 @@ function requestRandomNum(){
 
 }
 requestToDogAPI();
-requestRandomNum();
