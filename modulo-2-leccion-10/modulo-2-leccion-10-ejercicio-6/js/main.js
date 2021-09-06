@@ -1,5 +1,9 @@
 'use strict';
 
+const image = document.querySelector('.js-img');
+
+const button = document.querySelector('.js-button');
+
 //requestToDogAPI() brings all the dog breeds inside an object and put them in an array
 function requestToDogAPI(){
     fetch ('https://dog.ceo/api/breeds/list/all')
@@ -41,7 +45,8 @@ function requestRandomNumToAPI(max,array){
         console.log(randomNumber);
         let chosenDog = chooseBreed(array,randomNumber);
         console.log(chosenDog);
-        return chosenDog;
+        requestDogImage(chosenDog);
+        // return chosenDog;
     })
 }
 
@@ -50,10 +55,20 @@ function chooseBreed(breeds,randomNum){
     return breed;
 }
 
-// let randomNum = requestRandomNumToAPI();
+function requestDogImage(breed){
+    fetch('https://dog.ceo/api/breed/' + breed + '/images/random')
+    .then( response => response.json())
+    .then( data => {
+        let dog = data.message;
+        image.src = dog;
+        console.log(dog);
+        // return dog;
+    })
+}
 
-// chooseBreed(breedsNamesList, randomNum);
+function handleButton(){
+    requestToDogAPI();
+}
 
+button.addEventListener('click',handleButton);
 
-
-requestToDogAPI();
