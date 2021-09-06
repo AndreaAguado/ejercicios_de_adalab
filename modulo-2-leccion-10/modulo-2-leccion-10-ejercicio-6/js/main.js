@@ -1,5 +1,6 @@
 'use strict';
 
+const title = document.querySelector('.js-main__title');
 const image = document.querySelector('.js-img');
 
 const button = document.querySelector('.js-button');
@@ -61,6 +62,7 @@ function requestDogImage(breed){
     .then( data => {
         let dog = data.message;
         image.src = dog;
+        title.innerHTML = 'Raza: ' + breed;
         console.log(dog);
         // return dog;
     })
