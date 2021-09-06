@@ -1,0 +1,34 @@
+.body {
+  height: 100vh;
+  background-color: paleturquoise;
+  font-family: monospace;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15%;
+}
+.title {
+  font-size: 35px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__title {
+  font-size: 30px;
+}
+
+.button {
+  font-size: 20px;
+  font-family: monospace;
+  background-color: palevioletred;
+  height: 40px;
+  border: mediumvioletred solid 3px;
+  border-radius: 6px;
+}
