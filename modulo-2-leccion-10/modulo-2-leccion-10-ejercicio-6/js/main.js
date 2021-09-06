@@ -33,11 +33,13 @@ function retrieveBreeds(breeds){
       return breedsList;
 }
 
+//Based of the length of the breeds names list, calcMax(array) sets a top to which the integer we want to make a petition for will have to adjust to.
 function calcMax(array){
     let max = array.length-1;
     return max;
 }
 
+//requestRandomNumToAPI(max,array) using the max value previously obtained, asks for a random number within the range 0-max adapting for that the URL by appending ?max= to it :
 function requestRandomNumToAPI(max,array){
     fetch('https://api.rand.fun/number/integer?max='+ max)
     .then( response => response.json())
@@ -51,11 +53,12 @@ function requestRandomNumToAPI(max,array){
     })
 }
 
+// chooseBreed(breeds,randomNum) takes the list of breeds and picks the element whose position matches with the random number
 function chooseBreed(breeds,randomNum){
     let breed = breeds[randomNum];
     return breed;
 }
-
+//Now that there is a dog breed requestDogImage(breed) request one random image of said breed by making a new petition
 function requestDogImage(breed){
     fetch('https://dog.ceo/api/breed/' + breed + '/images/random')
     .then( response => response.json())
@@ -68,6 +71,7 @@ function requestDogImage(breed){
     })
 }
 
+//by clicking the button all the functions are triggered once requestToDogAPI is called:
 function handleButton(){
     requestToDogAPI();
 }
