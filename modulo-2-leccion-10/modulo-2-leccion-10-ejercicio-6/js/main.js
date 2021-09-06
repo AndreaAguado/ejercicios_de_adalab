@@ -11,4 +11,13 @@ function requestToDogAPI(){
     })
 }
 
+function requestRandomNum(){
+    fetch('https://api.rand.fun/number/integer')
+    .then( response => response.json())
+    .then( randomNumbers => {
+        console.log(randomNumbers);
+    })
+
+}
 requestToDogAPI();
+requestRandomNum();
