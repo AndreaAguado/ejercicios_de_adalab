@@ -7,10 +7,21 @@ function requestToDogAPI(){
     .then( dogBreeds => {
         const breeds = dogBreeds.message;
         console.log(breeds);
+        retrieveBreeds(breeds)
     
     })
 }
 
+function retrieveBreeds(breeds){
+    let breedsList = [];
+    let index = 0;
+    for (const property in breeds) {
+        breedsList[index] = property;
+        index++;
+      }
+      console.log(breedsList);
+
+}
 function requestRandomNum(){
     fetch('https://api.rand.fun/number/integer')
     .then( response => response.json())
