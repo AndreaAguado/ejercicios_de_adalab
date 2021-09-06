@@ -65,6 +65,7 @@ function requestDogImage(breed){
     .then( data => {
         let dog = data.message;
         image.src = dog;
+        image.classList.add('img')
         title.innerHTML = 'Raza: ' + breed;
         console.log(dog);
         // return dog;
