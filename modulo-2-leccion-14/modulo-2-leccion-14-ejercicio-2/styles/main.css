@@ -1,17 +1,46 @@
 .body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
   background-color: indigo;
+  background-color: fuchsia;
 }
 .bg {
   background-image: url("https://images2.alphacoders.com/712/thumb-1920-712142.jpg");
   background-size: cover;
 }
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .time {
   font-size: 200px;
   font-family: monospace;
   color: floralwhite;
+}
+.title {
+  font-size: 150px;
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  word-spacing: 100vh;
+}
+.hidden {
+  display: none;
+}
+
+.img {
+  height: 150px;
+}
+
+.container {
+  width: 75%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
