@@ -1,0 +1,17 @@
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: indigo;
+}
+.bg {
+  background-image: url("https://images2.alphacoders.com/712/thumb-1920-712142.jpg");
+  background-size: cover;
+}
+.time {
+  font-size: 200px;
+  font-family: monospace;
+  color: floralwhite;
+}
