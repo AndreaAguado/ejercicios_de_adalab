@@ -18,6 +18,7 @@ const incrementAndShowCounter = () => {
     time.classList.add('hidden');
     html = `<img class="img js-img hidden" src="./images/uva.png" alt="uva">`;
     container.innerHTML = html;
+    container.classList.add('hidden');
     celebration();
   }
 };
