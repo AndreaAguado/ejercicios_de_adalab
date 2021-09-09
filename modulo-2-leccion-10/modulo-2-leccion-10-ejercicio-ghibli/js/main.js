@@ -2,9 +2,12 @@
 
 const list = document.querySelector('.js_list');
 const button = document.querySelector('.js_button');
+const input = document.querySelector('.js_input');
 
 let movies = [];
 let data = [];
+let listItem;
+
 fetch('https://ghibliapi.herokuapp.com/films/')
 .then(response => response.json())
 .then(data =>{
@@ -24,11 +27,19 @@ function displayList(){
         html += `</li>`;
     }  
     list.innerHTML += html;
-    console.log(movies.title);
+    listItem = document.querySelector('.js_list_item');
 }
+
+function filterBySearch(){
+    // let url_tail = input.ariaValueMax;
+
+}
+
 function handleButton(){
 
 }
 
+
+listItem.addEventListener('click', filterBySearch);
 button.addEventListener('click',handleButton);
 
