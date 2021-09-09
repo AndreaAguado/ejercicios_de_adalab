@@ -13,6 +13,18 @@
 }
 .main {
   height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  background-color: darkturquoise;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer {
   height: 15%;
