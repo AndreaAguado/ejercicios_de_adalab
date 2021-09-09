@@ -30,16 +30,16 @@ function displayList(){
     listItem = document.querySelector('.js_list_item');
 }
 
-function filterBySearch(){
-    // let url_tail = input.ariaValueMax;
+// function filterBySearch(){
+//     // let url_tail = input.ariaValueMax;
 
-}
+// }
 
-function handleButton(){
+// function handleButton(){
 
-}
+// }
 
 
-listItem.addEventListener('click', filterBySearch);
-button.addEventListener('click',handleButton);
+// listItem.addEventListener('click', filterBySearch);
+// button.addEventListener('click',handleButton);
 
