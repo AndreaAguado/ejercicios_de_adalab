@@ -1,5 +1,16 @@
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .header {
-  height: 30px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  padding: 30px 20px 20px 20px;
+  text-align: justify;
 }
 .dayMode {
   background-color: lightblue;
@@ -9,6 +20,6 @@
   background-color: indigo;
   color: lightblue;
 }
-.invertScheme {
-  filter: invert(1);
+.message {
+  color: red;
 }
