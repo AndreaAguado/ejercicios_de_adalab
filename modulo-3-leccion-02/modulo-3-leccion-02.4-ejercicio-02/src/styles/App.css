@@ -1,0 +1,14 @@
+.header {
+  height: 30px;
+}
+.dayMode {
+  background-color: lightblue;
+  color: indigo;
+}
+.nightMode {
+  background-color: indigo;
+  color: lightblue;
+}
+.invertScheme {
+  filter: invert(1);
+}
