@@ -1,0 +1,18 @@
+.menu {
+  width: 200px;
+  height: 500px;
+  background-color: rosybrown;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.menu__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.hidden {
+  display: none;
+}
