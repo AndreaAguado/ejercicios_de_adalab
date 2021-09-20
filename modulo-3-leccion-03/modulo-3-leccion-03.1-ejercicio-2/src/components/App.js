@@ -3,6 +3,7 @@ import {useState} from 'react';
 function App() {
 const [text, setText] = useState('');
   const translateText = (ev) => {
+    ev.preventDefault();
     let text = ev.target.value;
     return setText(text.replace(/[aeiou]/gi, 'i'));    
   }
