@@ -57,6 +57,14 @@ const App = () => {
     setEmail(ev.target.value);
   };
 
+  const handleDelete = ev => {
+    ev.preventDefault();
+    const taskToDeleteId = ev.currentTarget.id;
+    tasks.find( task => {
+      return task.id === taskToDeleteId;
+    })
+
+  }
   
   const renderTasksList = () =>{
     return tasks.map( (task, index) => {
@@ -64,23 +72,23 @@ const App = () => {
       if(task.completed){
         console.log(task.completed);
          listItem = 
-         <li onClick={handleTask}       
+         <li       
          id={index} 
          key={index}>
            <div className="taskItem">
-             <span className={`crossed  ${ task.completed ? 'true' : 'false'}`} >{task.task}</span>
-             <button>Borrar</button>
+             <span id={index} onClick={handleTask} className={`crossed  ${ task.completed ? 'true' : 'false'}`} >{task.task}</span>
+             <button id={index} onClick={handleDelete}>Borrar</button>
            </div>
            </li>;
       }
       else {
          listItem = 
-         <li onClick={handleTask} 
+         <li
          id={index} 
          key={index}>
            <div className="taskItem">
-           <span className={task.completed ? 'true' : 'false'} >{task.task}</span>
-             <button>Borrar</button>
+           <span id={index} onClick={handleTask} className={task.completed ? 'true' : 'false'} >{task.task}</span>
+             <button id={index} onClick={handleDelete}>Borrar</button>
            </div>
            </li>;
       }
