@@ -28,6 +28,11 @@ const App = () => {
     { task: 'Comerme las croquetas mirando a la gente que entra en el gimnasio', completed: false }
   ] ));
 
+  const [newTaskInput, setNewTaskInput] = useState(
+    { 
+      task: '', 
+      completed: false 
+    });
   // useEffect
 
   // Usamos useEffect para guardar los datos en el local storage
@@ -90,11 +95,27 @@ const App = () => {
     setTasks([...tasks]);
   }
 
+  const handleNewTask = (ev) => {
+    setNewTaskInput({...newTaskInput, task: ev.currentTarget.value });
+    console.log(ev.currentTarget.value);
+    // setNewTaskInput({...newTaskInput, completed: false});
+  }
+
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  }
+  const handleAddTask = (ev) => {
+    //When the button is clicked, the task the user just wrote will be added to the list of tasks
+    setTasks([...tasks, newTaskInput]);
+    //the state where the new task is added (newTaskInput)is emptied to prepare it for another one. For that is set to its default values again, like in the beggining: 
+    setNewTaskInput({task: '', completed: false}); 
+  }
+
   return (
     <div>
       <h1>Usando el local storage:</h1>
 
-      <form>
+      <form className="form">
         <label htmlFor="name">Escribe tu nombre:</label>
         <input
           type="text"
@@ -122,6 +143,11 @@ const App = () => {
       <ol>
         {renderTasksList()}
       </ol>
+      <form className="form" onClick={handleSubmit}>
+        <label htmlFor="newTask">Añade una tarea nueva a tu lista:</label>
+          <input placeholder="Ej. Sacar a tu perrete" id="newTask" name="newTask" type="text" onChange={handleNewTask} value={newTaskInput.task} />     
+        <button onClick={handleAddTask}>Crear nueva tarea</button>
+      </form>
     </div>
   );
 };
