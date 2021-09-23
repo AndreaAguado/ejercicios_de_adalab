@@ -64,21 +64,24 @@ const App = () => {
       if(task.completed){
         console.log(task.completed);
          listItem = 
-         <li onClick={handleTask} 
-         className={`crossed  ${ task.completed ? 'true' : 'false'}`} 
+         <li onClick={handleTask}       
          id={index} 
-         key={index} 
-         >
-           {task.task}
+         key={index}>
+           <div className="taskItem">
+             <span className={`crossed  ${ task.completed ? 'true' : 'false'}`} >{task.task}</span>
+             <button>Borrar</button>
+           </div>
            </li>;
       }
       else {
          listItem = 
          <li onClick={handleTask} 
-         className={task.completed ? 'true' : 'false'} 
          id={index} 
          key={index}>
-           {task.task}
+           <div className="taskItem">
+           <span className={task.completed ? 'true' : 'false'} >{task.task}</span>
+             <button>Borrar</button>
+           </div>
            </li>;
       }
       return listItem;   
