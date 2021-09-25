@@ -1,9 +1,12 @@
 import '../styles/App.css';
+import Header from './Header.js';
+import Main from './Main';
 
 function App() {
   return (
     <div>
-      <h1>Hola Mundo!</h1>
+      <Header></Header>ea
+      <Main></Main>
     </div>
   );
 }
