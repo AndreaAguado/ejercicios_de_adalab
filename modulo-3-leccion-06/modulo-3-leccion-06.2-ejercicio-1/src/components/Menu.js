@@ -1,11 +1,12 @@
 import '../styles/App.css';
+import Link from './Link';
 
 const Menu = () => {
     return(
         <nav >
             <ul class="links-container">
-                <li><a title="Blog" class="link" href="https://adalab.es/blog/" target="_blank" rel="noreferrer">Blog</a></li>
-                <li><a title="Contacto" class="link" href="./contact.html" target="_blank">Contacto</a></li>
+                <Link text="Blog" title="Blog" class="link" href="https://adalab.es/blog/" target="_blank" rel="noreferrer"></Link>
+                <Link text="Contacto" title="Contacto" class="link" href="./contact.html" target="_blank"></Link>
             </ul>
         </nav>
     )
