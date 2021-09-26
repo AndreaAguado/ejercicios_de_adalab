@@ -1,5 +1,5 @@
-import '../styles/App.scss';
-import '../styles/variables.scss';
+// import '../styles/App.scss';
+// import '../styles/variables.scss';
 import Header from './Header.js';
 import Main from './Main';
 
