@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import '../styles/App.scss';
 import adalabLogo from '../images/adalab-logo-155x61.png';
 
 const Logo = () => {
