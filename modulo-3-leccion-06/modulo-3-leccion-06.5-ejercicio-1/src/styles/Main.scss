@@ -7,3 +7,14 @@
   justify-content: center;
   align-items: center;
 }
+.title {
+  color: var(--white-page);
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  word-spacing: 100vw;
+  text-align: center;
+  @media all and (min-width: 768px) {
+    font-size: 40px;
+  }
+}

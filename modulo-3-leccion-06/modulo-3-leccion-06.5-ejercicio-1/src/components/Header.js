@@ -1,5 +1,5 @@
-// import '../styles/App.scss';
 import '../styles/Header.scss';
+import '../styles/variables.scss';
 import Menu from './Menu';
 import Logo from './Logo';
 
