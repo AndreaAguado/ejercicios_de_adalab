@@ -1,4 +1,6 @@
-import '../styles/App.scss';
+// import '../styles/App.scss';
+import '../styles/variables.scss';
+import '../styles/Main.scss';
 
 const Main = () => {
     return (
