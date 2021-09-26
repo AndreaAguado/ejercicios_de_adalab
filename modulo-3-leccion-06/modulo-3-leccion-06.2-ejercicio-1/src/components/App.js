@@ -5,7 +5,7 @@ import Main from './Main';
 function App() {
   return (
     <div>
-      <Header></Header>ea
+      <Header></Header>
       <Main></Main>
     </div>
   );
