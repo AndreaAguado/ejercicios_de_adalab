@@ -4,6 +4,7 @@ import '../styles/App.css';
 import { useState } from 'react';
 import Preview from './Preview';
 import InputGroupText from './InputGroupText';
+import InputGroupSelect from './InputGroupSelect';
 
 const App = () => {
   // Estados del componente
@@ -23,8 +24,8 @@ const App = () => {
     setEmail(value);
   };
 
-  const handleRegion = ev => {
-    setRegion(ev.target.value);
+  const handleRegion = value => {
+    setRegion(value);
   };
 
   const handlePaymentType = ev => {
@@ -84,24 +85,7 @@ const App = () => {
           <InputGroupText inputId="email" inputName="email" labelText=" Escribe un email:" inputPlaceholder="mariagarcia@gmail.com" inputValue={email} handleChange={handleEmail}></InputGroupText>
 
           {/* region */}
-          <div className="input-group-select">
-            <label className="label-text" htmlFor="region">
-              Indica tu región:
-            </label>
-            <select
-              className="input-select"
-              name="region"
-              id="region"
-              value={region}
-              onChange={handleRegion}
-            >
-              <option>España peninsular</option>
-              <option>Islas Canarias</option>
-              <option>Islas Baleares</option>
-              <option>Ceuta</option>
-              <option>Melilla</option>
-            </select>
-          </div>
+          <InputGroupSelect inputId="region" inputName="region" labelText="Indica tu región:" inputValue={region} handleChange={handleRegion}></InputGroupSelect>
 
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
