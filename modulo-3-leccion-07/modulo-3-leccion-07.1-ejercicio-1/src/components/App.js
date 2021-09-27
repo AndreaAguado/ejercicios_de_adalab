@@ -192,17 +192,9 @@ const App = () => {
             />
           </div>
         </div>
-        <Preview></Preview>
-        {/* <div className="preview">
-          <h2>Tus datos son:</h2>
-          <ul>
-            <li>Nombre: {name}</li>
-            <li>Email: {email}</li>
-            <li>Región: {region}</li>
-            <li>Método de pago: {renderPaymentTypeText()}</li>
-            <li>Has aceptado nuestros términos legales: {legalTerms === true ? 'Sí' : 'No'}</li>
-          </ul>
-        </div> */}
+        <Preview name={name} email={email} region={region} 
+        // legalTerms={legalTerms === true ? 'Sí' : 'No'}
+        ></Preview>
 
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
