@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Preview from './Preview';
 import InputGroupText from './InputGroupText';
 import InputGroupSelect from './InputGroupSelect';
+import InputGroupRadio from './InputGroupRadio';
 
 const App = () => {
   // Estados del componente
@@ -90,50 +91,11 @@ const App = () => {
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="creditCard">
-              Tarjeta de crédito
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea creditCard */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="creditCard"
-              value="creditCard"
-              checked={paymentType === 'creditCard'}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio labelText="Tarjeta de crédito" inputName="paymentType" inputId="creditCard" inputValue="creditCard" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cash">
-              Efectivo
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cash */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cash"
-              value="cash"
-              checked={paymentType === 'cash'}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio labelText="Efectivo" inputName="paymentType" inputId="cash" inputValue="cash" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cashOnDelivery">
-              Contra reembolso
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cashOnDelivery */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cashOnDelivery"
-              value="cashOnDelivery"
-              checked={paymentType === 'cashOnDelivery'}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio labelText="Contra reembolso" inputName="paymentType" inputId="cashOnDelivery" inputValue="cashOnDelivery" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
           {/* legal terms */}
           <div className="input-group-checkbox">
