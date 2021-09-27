@@ -19,8 +19,8 @@ const App = () => {
     setName(value);
   };
 
-  const handleEmail = ev => {
-    setEmail(ev.target.value);
+  const handleEmail = value => {
+    setEmail(value);
   };
 
   const handleRegion = ev => {
@@ -81,20 +81,7 @@ const App = () => {
           <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name}  handleChange={handleName}></InputGroupText>
 
           {/* email */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="email">
-              Escribe un email:
-            </label>
-            <input
-              className="input-text"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariagarcia@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            />
-          </div>
+          <InputGroupText inputId="email" inputName="email" labelText=" Escribe un email:" inputPlaceholder="mariagarcia@gmail.com" inputValue={email} handleChange={handleEmail}></InputGroupText>
 
           {/* region */}
           <div className="input-group-select">
