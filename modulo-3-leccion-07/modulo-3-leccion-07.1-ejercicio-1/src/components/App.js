@@ -14,8 +14,9 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleName = ev => {
-    setName(ev.target.value);
+  const handleName = value => {
+    debugger;
+    setName(value);
   };
 
   const handleEmail = ev => {
@@ -77,21 +78,7 @@ const App = () => {
         <div className="form">
 
           {/* name */}
-          <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name}  handleChange="handleName"></InputGroupText>
-          {/* <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div> */}
+          <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name}  handleChange={handleName}></InputGroupText>
 
           {/* email */}
           <div className="input-group-text">
