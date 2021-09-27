@@ -3,6 +3,7 @@ import '../styles/App.css';
 // Fichero src/components/App.js
 import { useState } from 'react';
 import Preview from './Preview';
+import InputGroupText from './InputGroupText';
 
 const App = () => {
   // Estados del componente
@@ -76,7 +77,8 @@ const App = () => {
         <div className="form">
 
           {/* name */}
-          <div className="input-group-text">
+          <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name}  handleChange="handleName"></InputGroupText>
+          {/* <div className="input-group-text">
             <label className="label-text" htmlFor="name">
               Escribe un nombre:
             </label>
@@ -89,7 +91,7 @@ const App = () => {
               value={name}
               onChange={handleName}
             />
-          </div>
+          </div> */}
 
           {/* email */}
           <div className="input-group-text">
