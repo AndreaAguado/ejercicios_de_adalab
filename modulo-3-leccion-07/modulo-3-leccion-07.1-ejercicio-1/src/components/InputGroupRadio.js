@@ -12,8 +12,8 @@ const InputGroupRadio = (props) => {
           type="radio"
           name={props.inputName}
           id={props.inputId}
-          value={props.value}
-          checked={props.paymentType}
+          value={props.inputValue}
+          checked={props.checkedPaymentType}
           onChange={handleInputChange}
         />
       </div>

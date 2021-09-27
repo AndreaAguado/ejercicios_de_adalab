@@ -29,8 +29,8 @@ const App = () => {
     setRegion(value);
   };
 
-  const handlePaymentType = ev => {
-    setPaymentType(ev.target.value);
+  const handlePaymentType = value => {
+    setPaymentType(value);
   };
 
   const handleLegalTerms = ev => {
@@ -91,11 +91,11 @@ const App = () => {
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
 
-          <InputGroupRadio labelText="Tarjeta de crédito" inputName="paymentType" inputId="creditCard" inputValue="creditCard" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
+          <InputGroupRadio labelText="Tarjeta de crédito" inputName="paymentType" inputId="creditCard" inputValue="creditCard" checkedPaymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
-          <InputGroupRadio labelText="Efectivo" inputName="paymentType" inputId="cash" inputValue="cash" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
+          <InputGroupRadio labelText="Efectivo" inputName="paymentType" inputId="cash" inputValue="cash" checkedPaymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
-          <InputGroupRadio labelText="Contra reembolso" inputName="paymentType" inputId="cashOnDelivery" inputValue="cashOnDelivery" paymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
+          <InputGroupRadio labelText="Contra reembolso" inputName="paymentType" inputId="cashOnDelivery" inputValue="cashOnDelivery" checkedPaymentType={paymentType} handleChange={handlePaymentType}></InputGroupRadio>
 
           {/* legal terms */}
           <div className="input-group-checkbox">
