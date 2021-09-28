@@ -1,0 +1,23 @@
+.fail_page {
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main {
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.message {
+  font-family: cursive;
+  font-size: 100px;
+  color: aliceblue;
+}
+.nav_bar {
+  color: aliceblue;
+}
