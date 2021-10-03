@@ -17,7 +17,7 @@ const App = () => {
 
   // Eventos
   const handleName = value => {
-    debugger;
+    // debugger;
     setName(value);
   };
 
@@ -80,7 +80,7 @@ const App = () => {
         <div className="form">
 
           {/* name */}
-          <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name}  handleChange={handleName}></InputGroupText>
+          <InputGroupText inputId="name" inputName="name" labelText=" Escribe un nombre:" inputPlaceholder="María García" inputValue={name} handleChange={handleName}></InputGroupText>
 
           {/* email */}
           <InputGroupText inputId="email" inputName="email" labelText=" Escribe un email:" inputPlaceholder="mariagarcia@gmail.com" inputValue={email} handleChange={handleEmail}></InputGroupText>
@@ -112,7 +112,7 @@ const App = () => {
             />
           </div>
         </div>
-        <Preview name={name} email={email} region={region} 
+        <Preview name={name} email={email} region={region}
         // legalTerms={legalTerms === true ? 'Sí' : 'No'}
         ></Preview>
 
