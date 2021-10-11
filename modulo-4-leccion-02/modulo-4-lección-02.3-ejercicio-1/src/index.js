@@ -41,6 +41,10 @@ server.post('/user', (req, res) => {
 });
 
 server.get('/users', (req, res) => {
+  const filterByName = req.query.filterByName;
+  users = users.filter((user) => {
+    return user === filterByName;
+  })
   res.json({
     result: users
   });
