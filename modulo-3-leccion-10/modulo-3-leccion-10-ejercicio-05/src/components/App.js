@@ -1,5 +1,12 @@
+import utils from '../services/utils';
 const App = () => {
-  return <div>Hola mundo</div>;
+  let newWord = utils.paddingLeft('Andrea', 7, 'x');
+  return (
+    <div>
+      <div>Hola mundo</div>
+      <p>{newWord}</p>
+    </div>
+  );
 };
 
 export default App;
