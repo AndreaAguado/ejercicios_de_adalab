@@ -1,6 +1,6 @@
 import utils from '../services/utils';
 const App = () => {
-  let newWord = utils.paddingLeft('Andrea', 7, 'x');
+  let newWord = utils.paddingLeft('Andrea', 8, 'x');
   return (
     <div>
       <div>Hola mundo</div>
