@@ -18,3 +18,11 @@ test(`paddingLeft('hola', 6, 'a') devuelve 'aahola'`, () => {
     const result = utils.paddingLeft(word, finalSize, elementForFilling);
     expect(result).toBe("aahola");
 })
+
+test(`paddingLeft('ee', 4, 'aa') devuelve 'aaee'`, () => {
+    const word = "ee";
+    const finalSize = 4;
+    const elementForFilling = "aa";
+    const result = utils.paddingLeft(word, finalSize, elementForFilling);
+    expect(result).toBe("aaee");
+})
