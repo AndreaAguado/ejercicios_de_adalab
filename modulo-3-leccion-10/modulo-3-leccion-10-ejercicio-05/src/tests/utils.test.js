@@ -46,3 +46,13 @@ test(`paddingLeft('', 6, 'x') devuelve 'xxxxxx'`, () => {
 
     expect(result).toBe("xxxxxx")
 })
+
+test(`paddingLeft('hola mi amigo', 6, 'x') devuelve 'hola mi amigo'`, () => {
+    const text = "hola mi amigo";
+    const finalSize = 6;
+    const elementForFilling = "x";
+
+    const result = utils.paddingLeft(text, finalSize, elementForFilling);
+
+    expect(result).toBe("hola mi amigo");
+})
